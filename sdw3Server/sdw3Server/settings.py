@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'tutorials.apps.TutorialsConfig'
+    'tutorials.apps.TutorialsConfig',
+    'serendipity.apps.SerendipityConfig'
 ]
 
 MIDDLEWARE = [
