@@ -1,7 +1,8 @@
 from rest_framework import serializers
-import serendipity.models
+from serendipity.models import Section_info
 
 class SerendipitySerializer(serializers.ModelSerializer):
     class Meta:
-        model = modelname
-        fields=
+        model = Section_info
+        fields={
+        }
