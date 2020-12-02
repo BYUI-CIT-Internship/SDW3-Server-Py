@@ -58,4 +58,3 @@ Front end (visual) Requirments:
 - [ ] must have be printable
   - [ ] may work out of box if printing webpage works w/o modification
 - [ ] must be searchable
-- [ ] 

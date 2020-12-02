@@ -2,6 +2,12 @@ from django.db import models
 
 # Create your models here.
 
+#semester, only used for db validation
+#id
+#semester name, values are Spring Summer Fall Winter
+class Semester(models.Model):
+    semester_name = models.CharField(max_length=20)
+
 #Course Class
 #ID uq NN UQ
 #min credits
@@ -45,14 +51,14 @@ class Catalog_year_info(models.Model):
     degree_id = models.ForeignKey(Degree, on_delete=models.CASCADE)
     year = models.DateField(auto_now=False, auto_now_add=False)
 
-
+#TODO Change the first and second to reference smester :DONE:
 #Tracks
 #id pk nn uq ai
 #first Semester nn
 #second semester 
 class Tracks(models.Model):
-    first_semester = models.CharField(max_length=10)
-    second_semester = models.CharField(max_length=10)
+    first_semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='first_semester')
+    second_semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='second_semester')
 
 #building
 #id
@@ -98,11 +104,6 @@ class Sub_Program(models.Model):
 class Days(models.Model):
     day = models.CharField(max_length=15)
 
-#semester, only used for db validation
-#id
-#semester name, values are Spring Summer Fall Winter
-class Semester(models.Model):
-    semester_name = models.CharField(max_length=20)
 
 
 #location

@@ -78,6 +78,7 @@ WSGI_APPLICATION = 'sdw3Server.wsgi.application'
 
 
 # Database
+# Schema name goes here.
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {

@@ -3,6 +3,10 @@ from serendipity.models import Section_info
 
 class SerendipitySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Section_info
-        fields={
-        }
+        model = Course
+        fields={'min_credits',
+                'max_credits',
+                'course_desc',
+                'course_title',
+                'course_prefix',
+                'course_code'}
