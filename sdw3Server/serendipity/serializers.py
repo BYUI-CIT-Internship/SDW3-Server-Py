@@ -5,9 +5,9 @@ from serendipity.models import Course
 class SerendipitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
-        fields={'min_credits',
+        fields=('min_credits',
                 'max_credits',
-                'course_desc',
+                'course_description',
                 'course_title',
                 'course_prefix',
-                'course_code'}
+                'course_code')

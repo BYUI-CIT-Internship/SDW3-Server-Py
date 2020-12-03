@@ -15,7 +15,8 @@ from serendipity.serializers import SerendipitySerializer
 #First view to test just return all courses in the database
 @api_view(['GET'])
 def course_list(request):
-    if request.method == 'GET':
-        serendipity_serializer = SerendipitySerializer(courses, many=True)
-        return JsonResponse(serendipity_serializer.data, safe=False)
-        # 'safe=False' for objects serialization
+    courses = Course.objects.all()
+        
+    if request.method == 'GET': 
+        courses_serializer = SerendipitySerializer(courses, many=True)
+        return JsonResponse(courses_serializer.data, safe=False)
